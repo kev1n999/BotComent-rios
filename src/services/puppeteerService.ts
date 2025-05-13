@@ -1,6 +1,6 @@
 import puppeteer, { Browser, Page } from "puppeteer";
 
-class PuppeteerServices {
+class PuppeteerService {
     private browser!: Browser;
     
     constructor(public headless?: boolean) {};
@@ -35,4 +35,4 @@ class PuppeteerServices {
     }
 };
 
-export const puppeteerService = new PuppeteerServices();
+export const puppeteerService = new PuppeteerService();
