@@ -1,0 +1,19 @@
+{
+  "name": "tik-tok",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    ".": "npx ts-node ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "puppeteer": "^24.8.2"
+  }
+}
