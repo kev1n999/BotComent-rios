@@ -9,7 +9,12 @@ class PuppeteerServices {
     public async init(): Promise<void> {
         if (!this.browser) {
             if (!this.headless) this.headless = false;
-            this.browser = await puppeteer.launch({ headless: this.headless});
+            this.browser = await puppeteer.launch({ 
+                headless: this.headless, 
+                defaultViewport: {
+                    width: 1280,
+                    height: 800,}
+            });
         }    
     };
     
