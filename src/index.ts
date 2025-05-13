@@ -3,8 +3,8 @@ import { Login } from "./tasks/login";
 
 async function main() {
     // Função para iniciar o processo de login
-    const { login, password } = await credentialsLogin();
-    await Login({ login: login, password: password });
+    const { login, password, loginMethod } = await credentialsLogin();
+    await Login({ login: login, password: password, loginMethod: loginMethod });
 };
 
 main();
