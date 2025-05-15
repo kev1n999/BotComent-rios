@@ -3,6 +3,7 @@ import { LoginCredentials } from "../interfaces/loginCredentials";
 import { puppeteerService } from "../services/puppeteerService";
 import { urls } from "../urls";
 
+// Função que inicia o processo de login baseado nas informações enviadas no prompt de login
 export async function Login(credentials: LoginCredentials): Promise<void> {
     const page = await puppeteerService.getPage();
     const { login, password } = credentials;

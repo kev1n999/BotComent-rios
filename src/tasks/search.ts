@@ -1,6 +1,6 @@
-import { Page } from "puppeteer";
 import { puppeteerService } from "../services/puppeteerService";
 
+// Função que procura por vídeos baseado no método de pesquisa informado pelo usuário
 export async function searchVideos(searchMethod: string, search: string) {
     let url: string = "";
 

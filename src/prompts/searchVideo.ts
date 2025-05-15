@@ -1,6 +1,10 @@
 import prompts from "prompts";
 import { SearchVideoProps } from "../interfaces/searchVideo";
 
+/**
+ * Função que captura os dados e informações de pesquisa para iniciar a função de pesquisar vídeos no tiktok
+ * @returns {Promise<SearchVideoProps>} - Retorna dados como o método de pesquisa(hashtag ou pesquisa normal), e a pesquisa.
+ */
 export async function SearchVideo(): Promise<SearchVideoProps> {
     const { searchMethod } = await prompts({
         type: "text",
