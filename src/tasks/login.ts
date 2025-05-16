@@ -11,8 +11,11 @@ export async function Login(credentials: LoginCredentials): Promise<void> {
     try {
         await page.goto(urls.loginUrl);
 
-        await page.type('input[name="username"]', login);
-        await page.type('input[type="password"]', password);
+        const inputUsername = await page.waitForSelector('input[name="username"]', { visible: true });
+        const inputPassword = await page.waitForSelector('input[type="password"]', { visible: true });
+
+        await inputUsername?.type(login);
+        await inputPassword?.type(password);
 
         const submitLoginButton = await page.waitForSelector('button[data-e2e="login-button"]');
         await submitLoginButton?.click();
