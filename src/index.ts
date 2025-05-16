@@ -1,4 +1,3 @@
-import colors from "colors";
 import { credentialsLogin } from "./prompts/loginCredentials";
 import { Login } from "./tasks/login";
 import { searchVideos } from "./tasks/search";
@@ -11,6 +10,7 @@ async function main() {
     const { searchMethod, search } = await SearchVideo();
 
     await Login({ login: login, password: password });
+
     await searchVideos(searchMethod, search);
     await getVideos();
 };
